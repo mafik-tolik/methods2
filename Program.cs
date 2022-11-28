@@ -103,7 +103,6 @@ void Ex32()
 }
 
 
-
 // Ex33();
 // Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
 // массив [6, 7, 19, 345, 3] -> нет
@@ -123,6 +122,26 @@ void Ex33()
 }
 
 
+// Ex35();
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+void Ex35()
+{
+    int size = ReadIntFromConsole("Введите размер массива: ");
+    int[] array = new int[size];
+
+    FillIntArray(array, -99, 99);
+    PrintIntArray(array);
+
+    (int minValue, int maxValue) value = GetMinMaxValue();
+
+    int count = FindCountNumbers(array, value);
+    Console.WriteLine($"Количество элементов массива в отрезке [{value.minValue},{value.maxValue}]: {count}");
+}
 
 
 
@@ -187,4 +206,24 @@ void FindNumber(int[] arr, int find)
     }
     if (flag) Console.WriteLine($"Число {find} есть в массиве");
     else Console.WriteLine($"Числа {find} нет в массиве");
+}
+
+(int minV, int maxV) GetMinMaxValue()
+{
+    (int minV, int maxV) value;
+    value.minV = ReadIntFromConsole("Введите первую границу поиска (включительно): ");
+    value.maxV = ReadIntFromConsole("Введите вторую границу поиска (включительно): ");
+    if (value.minV > value.maxV) (value.minV, value.maxV) = (value.maxV, value.minV);
+
+    return value;
+}
+
+int FindCountNumbers(int[] arr, (int minVal, int maxVal) val)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] >= val.minVal && arr[i] <= val.maxVal) count++;
+    }
+    return count;
 }
