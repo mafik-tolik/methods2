@@ -1,0 +1,15 @@
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\bin\Debug\net7.0\Examples.exe
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\bin\Debug\net7.0\Examples.deps.json
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\bin\Debug\net7.0\Examples.runtimeconfig.json
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\bin\Debug\net7.0\Examples.dll
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\bin\Debug\net7.0\Examples.pdb
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.csproj.AssemblyReference.cache
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.AssemblyInfoInputs.cache
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.AssemblyInfo.cs
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.csproj.CoreCompileInputs.cache
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.dll
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\refint\Examples.dll
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.pdb
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\Examples.genruntimeconfig.cache
+C:\Users\tolik\Desktop\Знакомство с языками программирования (семинары)\Урок 5. Функции и одномерные массивы\Examples\obj\Debug\net7.0\ref\Examples.dll
