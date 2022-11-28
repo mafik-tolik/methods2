@@ -144,7 +144,32 @@ void Ex35()
 }
 
 
+// Ex37();
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
 
+void Ex37()
+{
+    int sizeOne = ReadIntFromConsole("Введите размер массива: ");
+    int[] arrayOne = new int[sizeOne];
+
+    FillIntArray(arrayOne, -9, 9);
+    PrintIntArray(arrayOne);
+
+    // int sizeTwo;
+    // if (sizeOne % 2 == 0) sizeTwo = sizeOne;
+    // else sizeTwo = sizeOne + 1;
+    int sizeTwo = (sizeOne % 2 == 0) ? sizeTwo = sizeOne / 2 : sizeTwo = sizeOne / 2 + 1; // этой записью заменили 3 строчки выше. 
+
+    int[] arrayTwo = new int[sizeTwo];
+
+    for (int i = 0; i < sizeTwo; i++)
+    {
+        arrayTwo[i] = arrayOne[i] * arrayOne[sizeOne - 1 - i];
+    }
+    Console.WriteLine(String.Join(", ", arrayTwo));
+}
 
 
 int ReadIntFromConsole(string message)
