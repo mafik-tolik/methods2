@@ -66,11 +66,11 @@ void Fiska03()
 }
 
 
-// Ex33();
+// Ex31();
 // Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
 // Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
 
-void Ex33()
+void Ex31()
 {
     int size = ReadIntFromConsole("Введите размер массива: ");
 
@@ -104,6 +104,26 @@ void Ex32()
 
 
 
+// Ex33();
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// массив [6, 7, 19, 345, 3] -> нет
+// массив [6, 7, 19, 345, 3] -> да
+
+void Ex33()
+{
+    int size = ReadIntFromConsole("Введите размер массива: ");
+    int[] array = new int[size];
+
+    FillIntArray(array, -9, 10);
+    PrintIntArray(array);
+
+    int number = ReadIntFromConsole("Введите число, которое нужно найти: ");
+
+    FindNumber(array, number);
+}
+
+
+
 
 
 
@@ -114,8 +134,9 @@ int ReadIntFromConsole(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void FillIntArray(int[] arr, int minVal = -99, int maxVal = 100)
+void FillIntArray(int[] arr, int minVal = -99, int maxVal = 99)
 {
+    maxVal++;
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = new Random().Next(minVal, maxVal);
@@ -127,9 +148,9 @@ void PrintIntArray(int[] arr)
     Console.Write($"Вывод массива: [");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{arr[i]},  ");
+        Console.Write($"{arr[i]}, ");
     }
-    Console.Write("\b\b\b]\n");
+    Console.Write("\b\b]\n");
 }
 
 int[] SumPositivAndSumNegative(int[] arr)
@@ -150,4 +171,20 @@ void IsNegativeForPositive(int[] arr)
     {
         arr[i] = -arr[i];
     }
+}
+
+void FindNumber(int[] arr, int find)
+{
+    bool flag = false;
+    int i = 0;
+    while (!flag && i < arr.Length)
+    {
+        if (arr[i] == find)
+        {
+            flag = true;
+        }
+        i++;
+    }
+    if (flag) Console.WriteLine($"Число {find} есть в массиве");
+    else Console.WriteLine($"Числа {find} нет в массиве");
 }
