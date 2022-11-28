@@ -1,7 +1,6 @@
 ﻿Console.Clear();
 
 
-
 //Fiska01();
 
 void Fiska01()
@@ -83,46 +82,72 @@ void Ex33()
     int[] massiv = SumPositivAndSumNegative(array);
 
     Console.WriteLine($"Cумма положительных чисел: {massiv[0]}\nCумма отрицательных чисел: {massiv[1]}");
+}
 
 
-    int ReadIntFromConsole(string message)
-    {
-        System.Console.Write(message);
-        return Convert.ToInt32(Console.ReadLine());
-    }
+// Ex32();
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-    void FillIntArray(int[] arr, int minVal = -99, int maxVal = 100)
-    {
-        for (int i = 0; i < arr.Length; i++)
-        {
-            arr[i] = new Random().Next(minVal, maxVal);
-        }
-    }
+void Ex32()
+{
+    int size = ReadIntFromConsole("Введите размер массива: ");
 
-    void PrintIntArray(int[] arr)
-    {
-        Console.Write($"Вывод массива: [");
-        for (int i = 0; i < arr.Length; i++)
-        {
-            Console.Write($"{arr[i]}, ");
-        }
-        Console.Write("\b\b]\n");
-    }
+    int[] array = new int[size];
 
-    int[] SumPositivAndSumNegative(int[] arr)
-    {
-        int[] mass = new int[2];
+    FillIntArray(array, -9, 10);
+    PrintIntArray(array);
 
-        for (int i = 0; i < size; i++)
-        {
-            if (arr[i] > 0) mass[0] += array[i];
-            else if (arr[i] < 0) mass[1] += array[i];
-        }
-        return mass;
-    }
+    IsNegativeForPositive(array);
+    PrintIntArray(array);
 }
 
 
 
 
 
+
+
+int ReadIntFromConsole(string message)
+{
+    System.Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void FillIntArray(int[] arr, int minVal = -99, int maxVal = 100)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next(minVal, maxVal);
+    }
+}
+
+void PrintIntArray(int[] arr)
+{
+    Console.Write($"Вывод массива: [");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]},  ");
+    }
+    Console.Write("\b\b\b]\n");
+}
+
+int[] SumPositivAndSumNegative(int[] arr)
+{
+    int[] mass = new int[2];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0) mass[0] += arr[i];
+        else if (arr[i] < 0) mass[1] += arr[i];
+    }
+    return mass;
+}
+
+void IsNegativeForPositive(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = -arr[i];
+    }
+}
