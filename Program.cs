@@ -56,13 +56,69 @@ void Fiska03()
         string degree = Math.Pow(number, 3).ToString();
         if (number == LastNumber)
             return degree;
-        return degree + ", "; F
+        return degree + ", ";
     }
 
     int a = Convert.ToInt32(Console.ReadLine());
     for (int i = 1; i <= a; i++)
     {
         Console.Write(NumberToThridDegree(i, a));
+    }
+}
+
+
+// Ex33();
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+void Ex33()
+{
+    int size = ReadIntFromConsole("Введите размер массива: ");
+
+    int[] array = new int[size];
+
+    FillIntArray(array, -9, 10);
+    PrintIntArray(array);
+
+    int[] massiv = SumPositivAndSumNegative(array);
+
+    Console.WriteLine($"Cумма положительных чисел: {massiv[0]}\nCумма отрицательных чисел: {massiv[1]}");
+
+
+    int ReadIntFromConsole(string message)
+    {
+        System.Console.Write(message);
+        return Convert.ToInt32(Console.ReadLine());
+    }
+
+    void FillIntArray(int[] arr, int minVal = -99, int maxVal = 100)
+    {
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arr[i] = new Random().Next(minVal, maxVal);
+        }
+    }
+
+    void PrintIntArray(int[] arr)
+    {
+        Console.Write($"Вывод массива: [");
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.Write($"{arr[i]}, ");
+        }
+        Console.Write("\b\b]\n");
+    }
+
+    int[] SumPositivAndSumNegative(int[] arr)
+    {
+        int[] mass = new int[2];
+
+        for (int i = 0; i < size; i++)
+        {
+            if (arr[i] > 0) mass[0] += array[i];
+            else if (arr[i] < 0) mass[1] += array[i];
+        }
+        return mass;
     }
 }
 
